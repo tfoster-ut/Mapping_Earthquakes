@@ -7,6 +7,9 @@
 # .DS_Store
 .DS_Store
 
+# Config ignore
+config.js
+
 # BlueJ files
 *.ctxt
 
