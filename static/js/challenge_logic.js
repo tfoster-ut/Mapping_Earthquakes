@@ -1,5 +1,3 @@
-// Add console.log to check to see if our code is working.
-console.log("working");
 
 // We create the tile layer that will be the background of our map.
 let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -58,7 +56,7 @@ let overlays = {
 
 // Then we add a control to the map that will allow the user to change which
 // layers are visible.
-L.control.layers(baseMaps, overlays).addTo(map);
+L.control.layers(baseMaps, overlays, {collapsed:false}).addTo(map);
 
 // Retrieve the earthquake GeoJSON data.
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(data) {
